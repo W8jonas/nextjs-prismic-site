@@ -9,7 +9,7 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Visitor!!",
+							"text": "Productivity that flows \nwith your life.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -22,7 +22,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Nostrud commodo non eiusmod culpa consequat officia. Reprehenderit ex occaecat excepteur consequat incididunt ut",
+							"text": "Unleash your potential by harmonizing your daily tasks and habits with your unique energy rhythms.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -31,8 +31,8 @@
 			},
 			"button_label": {
 				"__TYPE__": "FieldContent",
-				"value": "kids",
-				"type": "Text"
+				"type": "Text",
+				"value": "Try for free"
 			},
 			"button_link": {
 				"__TYPE__": "LinkContent",
