@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={clsx(nunito.className, nunito_Sans.className)}>{children}</body>
+    <html lang="en" className={clsx(nunito.variable, nunito_Sans.variable)}>
+      <body>{children}</body>
     </html>
   )
 }
