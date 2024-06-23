@@ -19,7 +19,7 @@ const nunito_Sans = Nunito_Sans({
 })
 
 export async function generateMetadata(): Promise<Metadata> {
- 
+
   const client = createClient()
   const settings = await client.getSingle('settings')
 
@@ -43,8 +43,8 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
-        </body>
         <Footer/>
+      </body>
     </html>
   )
 }
