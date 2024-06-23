@@ -10,12 +10,12 @@ export default async function Footer() {
   const settings = await client.getSingle('settings')
 
   return (
-    <header>
+    <footer>
       <Link href="/">
         {settings.data.site_title}
       </Link>
       
-      <p>@{new Date().getFullYear()} Flowrise</p>
+      <p>@{new Date().getFullYear()} W8 site</p>
 
       <nav>
         <ul>
@@ -26,6 +26,6 @@ export default async function Footer() {
           ))}
         </ul>
       </nav>
-    </header>
+    </footer>
   )
 }
