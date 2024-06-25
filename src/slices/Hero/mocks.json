@@ -77,8 +77,10 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Depend"
-						}
+							"text": "Features for finding focus",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -88,15 +90,17 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Lorem deserunt ex minim laboris do exercitation adipisicing sint sunt reprehenderit dolore est velit adipisicing ea."
-						}
+							"text": "Harness our innovative feature set to propel your productivity power. Make every moment count, stress less.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"button_label": {
 				"__TYPE__": "FieldContent",
-				"value": "which",
-				"type": "Text"
+				"type": "Text",
+				"value": "Try for free"
 			},
 			"button_link": {
 				"__TYPE__": "LinkContent",
