@@ -1,5 +1,24 @@
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import Bounded from "@/components/Bounded";
+import Heading from "@/components/Heading";
+import { PrismicNextImage } from "@prismicio/next";
+import clsx from "clsx";
+
+const components: JSXMapSerializer = {
+  heading2: ({children}) => (
+    <Heading
+      as="h2"
+      size="lg"
+      className=""
+    >
+      {children}
+    </Heading>
+  ),
+  paragraph: ({children}) => (
+    <p className=" text-slate-600">{children}</p>
+  )
+}
 
 /**
  * Props for `TextWithImage`.
@@ -12,13 +31,30 @@ export type TextWithImageProps =
  */
 const TextWithImage = ({ slice }: TextWithImageProps): JSX.Element => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for text_with_image (variation: {slice.variation})
-      Slices
-    </section>
+      <div className="grid gap-8 md:grid-cols-2 place-items-center">
+        <PrismicNextImage
+          field={slice.primary.image}
+          className={clsx(
+            "rounded-lg",
+            slice.variation === "imageRight" && "md:order-2"
+          )}
+        />
+        <div className={"grid gap-4"}>
+          <PrismicRichText
+            field={slice.primary.heading}
+            components={components}
+          />
+          <PrismicRichText
+            field={slice.primary.body}
+            components={components}
+          />
+        </div>
+      </div>
+    </Bounded>
   );
 };
 
