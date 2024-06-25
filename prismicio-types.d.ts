@@ -244,6 +244,81 @@ export type AllDocumentTypes =
   | TestimonialDocument;
 
 /**
+ * Primary content in *CallToActionBanner → Default → Primary*
+ */
+export interface CtaBannerSliceDefaultPrimary {
+  /**
+   * Heading field in *CallToActionBanner → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_banner.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body field in *CallToActionBanner → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_banner.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * ButtonLink field in *CallToActionBanner → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_banner.default.primary.buttonlink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  buttonlink: prismic.LinkField;
+
+  /**
+   * ButtonLabel field in *CallToActionBanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta_banner.default.primary.buttonlabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttonlabel: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for CallToActionBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaBannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CallToActionBanner*
+ */
+type CtaBannerSliceVariation = CtaBannerSliceDefault;
+
+/**
+ * CallToActionBanner Shared Slice
+ *
+ * - **API ID**: `cta_banner`
+ * - **Description**: CtaBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaBannerSlice = prismic.SharedSlice<
+  "cta_banner",
+  CtaBannerSliceVariation
+>;
+
+/**
  * Item in *Features → Default → Primary → icons*
  */
 export interface FeaturesSliceDefaultPrimaryIconsItem {
@@ -693,6 +768,10 @@ declare module "@prismicio/client" {
       TestimonialDocument,
       TestimonialDocumentData,
       AllDocumentTypes,
+      CtaBannerSlice,
+      CtaBannerSliceDefaultPrimary,
+      CtaBannerSliceVariation,
+      CtaBannerSliceDefault,
       FeaturesSlice,
       FeaturesSliceDefaultPrimaryIconsItem,
       FeaturesSliceDefaultPrimary,

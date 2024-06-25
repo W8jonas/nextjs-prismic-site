@@ -1,0 +1,43 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Leave"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum in sint fugiat cupidatat exercitation excepteur officia id. Tempor cupidatat magna elit nulla. Laborum est commodo nulla in incididunt excepteur."
+						}
+					}
+				]
+			},
+			"buttonlink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"buttonlabel": {
+				"__TYPE__": "FieldContent",
+				"value": "interest",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
